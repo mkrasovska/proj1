@@ -1,14 +1,13 @@
-//найти максимальное значение n доя которого можно вычислить (2n)!
-var k = 100;
-while ( isFinite(factorialN(k)) ) k++;
-n = Math.floor(k/2);
-alert(n);
+//найти максимальное значение для которого можно вычислить произведение 2*4*6*...*2(n-1)*2n
+var n = 1;
+while ( isFinite(factorial2N(n)) ) n++;
+console.log(n);
 
 
-function factorialN(n) {
+function factorial2N(n) {
 var factorial = 1;
 for (i=1; i <= n; i++) {
-factorial *= i;
+factorial *= 2*i;
 } 
 return(factorial);
 }
