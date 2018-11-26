@@ -1,5 +1,5 @@
 function diffMinMax(arr) {
-    if (arr.length <= 1) alert ('невозможно выполнить операцию, в массиве мешьше двух элементов');
+    if (arr.length <= 1) alert ('невозможно выполнить операцию, в массиве менее двух элементов');
         else {
     var arrMin = arr[0];
     var arrMax = arr[0]; 
