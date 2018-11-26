@@ -1,11 +1,20 @@
+//x - значение угла в радианахn
+//n - длина ряда 
+var x = 3.14
+var n = 10;
+//var x = +prompt('Введите значение угла в радианах, '3.14');
+//var n = +prompt('Введите длину ряда, '10');
+
+console.log('Привет. Я считаю косинус с помощью ряда Тейлора n-ного порядка')
+cosTailorN(x, n);
+
 function powerN(x,n) {
     var power = 1;
     for (i = 1; i <= n; i++) {
     power *= x; }
     return power;
-//    console.log(power);
 }
-console.log( powerN(-4,3) )
+//console.log( powerN(-4,3) )
 
 function factorialN(n) {
     factorial = 1;
@@ -14,19 +23,18 @@ function factorialN(n) {
     return factorial;
 }
 
-console.log( factorialN(4) )
+//console.log( factorialN(4) )
 
-function cosTailorN(depth) {
+function cosTailorN(x,depth) {
 var cosTailor = 1;
-    for (i = 2; i <= depth; i++) {
-    cosTailor = cosTailor - powerN(-x,i)/factorialN(i); 
+    for (var i = 1; i <= depth; i++) {
+    cosTailor = cosTailor + powerN(-1,i)*powerN(x,2*i)/factorialN(2*i); 
     console.log(cosTailor);
     }
     console.log(cosTailor);
-}
+   }
 
-//var x = +prompt('Введите x, '3.14');
 
-cosTailorN(length);
-var x = 3.14
-var length = 10;
+
+
+
